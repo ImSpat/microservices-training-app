@@ -14,7 +14,14 @@ public class OrderLineService {
     private final OrderLineMapper mapper;
 
     public Integer saveOrderLine(OrderLineRequest request) {
-        var order = mapper.toOrderLine(request);
+        var order = mapper.mapOrderLineRequestToOrderLine(request);
         return repository.save(order).getId();
+    }
+
+    public List<OrderLineResponse> findAllByOrderId(Integer orderId) {
+        return repository.findAllByOrderId(orderId)
+                .stream()
+                .map(mapper::mapOrderLineToOrderLineResponse)
+                .collect(Collectors.toList());
     }
 }
