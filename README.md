@@ -11,7 +11,9 @@
 - Docker
 
 ## About the Project
-The project aims to simulate ecommerce platform that allows customers to browse products, place orders, process payments and send notifications. Every service is implemented as microservice using http requests and kafka to communicate. Services fetch configuration from config-server and use Eureka server for discovery. The main goal of this project was to learn and practice technologies used during development of applications based on microservice architecture. 
+The project aims to simulate ecommerce platform that allows customers to browse products, place orders, process payments and send notifications. Every service is implemented as microservice using http requests and kafka to communicate. Services fetch configuration from config-server and use Eureka server for discovery. The main goal of this project was to learn and practice technologies used during development of applications based on microservice architecture.
+
+Currently tests are only implemented for customer microservice (work in progress)
 
 ## How it works
 - All microservices fetch configuration information from config server
